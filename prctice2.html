@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function setColor(color) {
+        const aList = document.querySelectorAll("a");
+        let i = 0;
+        while (i < aList.length) {
+          aList[i].style.color = color;
+          i = i + 1;
+        }
+      }
+      function bodySetColor(color) {
+        document.querySelector("body").style.color = color;
+      }
+      function bodySetBgColor(color) {
+        document.querySelector("body").style.backgroundColor = color;
+      }
+      function nightDayHandler(self) {
+        const bodyTag = document.querySelector("body");
+        if (self.value === "나이트모드") {
+          bodySetBgColor("black");
+          bodySetColor("white");
+          self.value = "일반모드";
+          setColor("powderblue");
+        } else {
+          bodySetBgColor("white");
+          bodySetColor("black");
+          self.value = "나이트모드";
+          setColor("blue");
+        }
+      }
+    </script>
+    <h1>JavaScript</h1>
+
+    <p>웹페이지 다크모드를 만들어 봅시당</p>
+    <input
+      type="button"
+      value="나이트모드"
+      onclick="nightDayHandler(this)
+      
+  "
+    />
+    <input
+      type="button"
+      value="나이트모드"
+      onclick=" nightDayHandler(this)
+     
+  "
+    />
+    <ol>
+      <li><a href="#">javascript</a></li>
+      <li><a href="#">html</a></li>
+      <li><a href="#">css</a></li>
+    </ol>
+  </body>
+</html>
